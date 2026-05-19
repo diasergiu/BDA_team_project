@@ -3,9 +3,9 @@ from src.intermediate_objects.final_result import FinalResult
 def process_raw_text(final_result):
     final_result.is_question = is_question(final_result.text_after_correction)
     final_result.num_words = count_words(final_result.text_after_correction)
+    final_result.num_words = count_words(final_result.text_after_correction)
     final_result.text_size_chars = count_characters(final_result.text_after_correction)
     final_result.speach_rate_wps = get_speach_rate_wps(final_result.num_words, final_result.duration)
-    # final_result.speaker_turn_id not implemented yet, as it requires tracking multiple speakers and their turns in the conversation, which is a more complex task that may involve speaker diarization techniques.
     return final_result
 
 
@@ -33,4 +33,3 @@ def get_speach_rate_wps(word_count, duration):
         return word_count / duration
     else:
         return 0
-    

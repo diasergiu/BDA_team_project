@@ -11,7 +11,9 @@ class FinalResult:
         self.is_question: bool | None = None
         self.num_words: int | None = None
         self.text_size_chars: int | None = None
-        # self.speaker_turn_id: int | None = None
+        self.speach_rate_wps: float | None = None
+        self.time_taken: float | None = None
+        self.speaker_turn_id: int | None = None
 
     def create_final_result(self, timestamp: str, name_speaker: str, raw_text: str) -> FinalResult:
         # how do you make a constructor in python?
@@ -26,7 +28,8 @@ class FinalResult:
             self.is_question,
             self.num_words,
             self.text_size_chars,
-            # self.speaker_turn_id,
+            self.speach_rate_wps,
+            self.speaker_turn_id,
         ]
 
 

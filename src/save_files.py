@@ -9,7 +9,7 @@ def save_transcript(transcript, filename="raw_transcript.txt"):
 
 HEADER = ["timestamp", "name_speaker", "raw_text", "text_after_correction", "is_question", "num_words", "text_size_chars", "speaker_turn_id"]
 
-def save_final_result(final_result: FinalResult, filename: str = "final_results.csv"):
+def save_final_result(final_result: FinalResult, filename: str = "CSV/final_results.csv"):
     write_header = not os.path.exists(filename)
     with open(filename, "a", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)

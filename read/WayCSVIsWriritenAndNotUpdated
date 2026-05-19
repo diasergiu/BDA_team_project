@@ -1,0 +1,18 @@
+Question to deepseek: python csv is it more efficient to wright the whole file instead of updating only the row that change
+
+For standard CSV file operations in Python, writing the entire file is almost always the correct and more practical approach, even though it feels inefficient. Directly overwriting a single row is technically very difficult and only marginally beneficial in specific edge cases.
+
+🔍 Why You Can't Simply "Update" One Row
+A CSV file is a plain text file. To "update" a specific row, you would need to locate it and overwrite the exact same number of bytes on disk. This is problematic for two key reasons:
+
+Variable Line Length: If your new value has a different number of characters (e.g., changing "Bob" to "Robert"), the byte length of that line changes. Overwriting it would corrupt the formatting of the rest of the file.
+
+No Row Indexing: The file system has no concept of "row 500." The only way to find a row is to read every byte from the start until you reach it.
+
+As a result, the standard pattern for updating a CSV is to read all the old data into memory, modify it, and then write all the new data back to the file.
+
+🐍 Standard Solutions (The "Rewrite" Approach)
+Here are the most common and effective ways to do this, depending on your needs. All of these read the old file and write a completely new one.
+
+The Simple and Safe Method (Creating a Temp File)
+This is the most robust approach. It uses a temporary file, so if your script crashes, you don't lose your original data

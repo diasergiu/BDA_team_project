@@ -1,0 +1,7 @@
+timestamp,name_speaker,raw_text,text_after_correction,is_question,num_words,text_size_chars,speaker_turn_id
+2026-05-19 17:08:22,Sergiu,i am currently having of,I am currently having off.,False,5,21,0.7827505205172105,
+2026-05-19 17:10:32,Sergiu,currently debating,currently debating,False,2,17,0.34016100534709726,
+2026-05-19 17:10:47,Andu,whether i should go to the gym on it currently doing what am i,"Whether I should go to the gym, or what am I currently doing?",True,13,47,2.675378081859137,
+2026-05-19 17:33:28,Sergiu,currently working at some,Currently working at home.,False,4,22,0.6486300487438182,
+2026-05-19 17:40:57,Andu,currently listening to the,Currently listening to the music.,False,5,28,0.7820222592000237,
+2026-05-19 17:44:25,Malta,currently thinking of going,Currently thinking of going.,False,4,24,0.6266030071429477,1
